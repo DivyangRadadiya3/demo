@@ -1,49 +1,66 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
-const Langagues = ["HTML", "CSS", "JAVASCRIPT", "BOOTSTRAP", "REACT"];
+const Langagues = [
+  {
+    name: "HTML",
+    intro:
+      "HTML is the Hyper Text Markup Language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables, etc., and save it all in a text file that any browser can read and display.",
+  },
+  {
+    name: "CSS",
+    intro:
+      "HTML is the Hyper Text Markup Language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables, etc., and save it all in a text file that any browser can read and display.",
+  },
+  {
+    name: "JAVASCRIPT",
+    intro:
+      "HTML is the Hyper Text Markup Language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables, etc., and save it all in a text file that any browser can read and display.",
+  },
+  {
+    name: "BOOTSTRAP",
+    intro:
+      "HTML is the Hyper Text Markup Language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables, etc., and save it all in a text file that any browser can read and display.",
+  },
+  {
+    name: "REACT",
+    intro:
+      "HTML is the Hyper Text Markup Language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables, etc., and save it all in a text file that any browser can read and display.",
+  },
+];
 
 function Tutorials() {
   return (
     <>
       <div className="flex flex-wrap mx-auto mt-10">
-        {Langagues.map((item) => (
-          <NavLink to={item}>
-            <div className="p-4  max-w-sm">
+        {Langagues.map((value,index) => (
+          <NavLink to={value.name} key={index}>
+            <div className="p-4  max-w-sm" key={index}>
               <div className="flex rounded-lg h-full dark:bg-gray-800 bg-teal-400 p-8 flex-col">
                 <div className="flex items-center mb-3">
-                  <p className="text-white dark:text-white text-xl font-medium">
-                    {item}
+                  <p className="text-white dark:text-teal-400 text-2xl item- font-medium">
+                    {value.name}
                   </p>
                 </div>
                 <div className="flex flex-col justify-between flex-grow">
-                  <p className="leading-relaxed text-base text-white dark:text-gray-300">
-                    Blue bottle crucifix vinyl post-ironic four dollar toast
-                    vegan taxidermy. Gastropub indxgo juice poutine.
+                  <p className=" text-base text-justify text-white dark:text-slate-200">
+                    {value.intro}
                   </p>
-                  <a
-                    href="#"
-                    className="mt-3 text-black dark:text-white hover:text-blue-600 inline-flex items-center"
-                  >
-                    Learn More
-                    <svg
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                  <p className="mt-3 text-lg text-black dark:text-white hover:text-yellow-400 inline-flex items-center">
+                    Learn More 
+                    <div
                       className="w-4 h-4 ml-2"
-                      viewBox="0 0 24 24"
                     >
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
+                      <MdOutlineKeyboardDoubleArrowRight />
+                    </div>
+                  </p>
                 </div>
               </div>
             </div>
           </NavLink>
         ))}
-
+          
         {/* <div className="p-4 max-w-sm">
           <div className="flex rounded-lg h-full dark:bg-gray-800 bg-teal-400 p-8 flex-col">
             <div className="flex items-center mb-3">

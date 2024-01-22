@@ -9,8 +9,8 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 const navigation = [
   { name: "Home", href: "#", current: true },
   { name: "Tutorials", href: "#", current: false },
-  { name: "About Us", href: "#", current: false },
-  { name: "Contact Us", href: "#", current: false },
+  { name: "AboutUs", href: "#", current: false },
+  { name: "ContactUs", href: "#", current: false },
   { name: "Dashboard", href: "#", current: false },
 ];
 
@@ -56,20 +56,20 @@ export default function Navbar() {
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start" >
               <div className="hidden sm:hidden md:hidden lg:block xl:block 2xl:block">
                 <div className="flex space-x-4">
-                  {navigation.map((item) => (
-                    <NavLink to={item.name}>
+                  {navigation.map((value,index) => (
+                    <NavLink to={value.name} key={index}>
                       <button
-                        key={item.name}
-                        // href={item.href}
+                        key={index}
+                        // href={value.href}
                         className={classNames(
-                          item.current
+                          value.current
                             ? "bg-gray-700 text-white"
                             : "text-black hover:bg-gray-700 hover:text-white",
                           "rounded-full px-5 py-2 text-xl  font-normal"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={value.current ? "page" : undefined}
                       >
-                        {item.name}
+                        {value.name}
                       </button>
                     </NavLink>
                   ))}
@@ -148,10 +148,10 @@ export default function Navbar() {
 
       <div className={toggle ? "block shadow-lg" : "hidden"}>
         <div className="space-y-1 px-2 pb-3 pt-2 ">
-          {navigation.map((item) => (
-            <NavLink to={item.name}>
+          {navigation.map((item,index) => (
+            <NavLink to={item.name} key={index}>
               <button
-                key={item.name}
+                key={index}
                 // onClick={() => setToggle(!toggle)}
                 // as="a"
                 // href={item.href}
@@ -170,7 +170,6 @@ export default function Navbar() {
         </div>
       </div>
     </>
-    // )}
-    // </Disclosure>
+
   );
 }

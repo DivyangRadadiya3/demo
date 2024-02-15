@@ -1,5 +1,5 @@
-import { Fragment, useState } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import React,{ useState } from "react";
+// import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { NavLink } from "react-router-dom";
 // import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 // import { VscAccount } from "react-icons/vsc";
@@ -7,11 +7,11 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 // import { BsPersonCircle } from "react-icons/bs";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "Tutorials", href: "#", current: false },
-  { name: "AboutUs", href: "#", current: false },
-  { name: "ContactUs", href: "#", current: false },
-  { name: "Dashboard", href: "#", current: false },
+  { name: "Home", current: true },
+  { name: "Tutorials", current: false },
+  { name: "AboutUs", current: false },
+  { name: "ContactUs", current: false },
+  { name: "Dashboard", current: false },
 ];
 
 function classNames(...classes) {
@@ -20,6 +20,11 @@ function classNames(...classes) {
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const [activeButton, setActiveButton] = useState();
+
+  function pgActive(pageName) {
+    setActiveButton(pageName);
+  }
 
   return (
     // <Disclosure
@@ -67,7 +72,7 @@ export default function Navbar() {
                             : "text-black hover:bg-gray-700 hover:text-white",
                           "rounded-full px-5 py-2 text-xl  font-normal"
                         )}
-                        aria-current={value.current ? "page" : undefined}
+                        // aria-current={value.current ? "page" : undefined}
                       >
                         {value.name}
                       </button>
@@ -144,29 +149,35 @@ export default function Navbar() {
                 </Menu> */}
           </div>
         </div>
-        <div className={toggle ? "block my-3 bg-gray-200 dark:bg-gray-200 rounded-md shadow-md  w-full lg:hidden" : "hidden"}>
-        <div className="space-y-1 px-2 py-3">
-          {navigation.map((item, index) => (
-            <NavLink to={item.name} key={index}>
-              <button
-                key={index}
-                // onClick={() => setToggle(!toggle)}
-                // as="a"
-                // href={item.href}
-                className={classNames(
-                  item.current
-                    ? "bg-gray-700 text-white"
-                    : "text-black hover:bg-gray-800 hover:text-white",
-                  "block rounded-md px-3 py-2 text-xl font-normal w-full"
-                )}
-                aria-current={item.current ? "page" : undefined}
-              >
-                {item.name}
-              </button>
-            </NavLink>
-          ))}
+        <div
+          className={
+            toggle
+              ? "block my-3 bg-gray-200 dark:bg-gray-200 rounded-md shadow-md  w-full lg:hidden"
+              : "hidden"
+          }
+        >
+          <div className="space-y-1 px-2 py-3">
+            {navigation.map((item, index) => (
+              <NavLink to={item.name} key={index}>
+                <button
+                  key={index}
+                  // onClick={() => setToggle(!toggle)}
+                  // as="a"
+                  // href={item.href}
+                  className={classNames(
+                    item.current
+                      ? "bg-gray-700 text-white"
+                      : "text-black hover:bg-gray-800 hover:text-white",
+                    "block rounded-md px-3 py-2 text-xl font-normal w-full"
+                  )}
+                  // aria-current={item.current ? "page" : undefined}
+                >
+                  {item.name}
+                </button>
+              </NavLink>
+            ))}
+          </div>
         </div>
-      </div>
       </div>
 
       {/* <div className={toggle ? "block shadow-lg  w-full lg:hidden" : "hidden"}>

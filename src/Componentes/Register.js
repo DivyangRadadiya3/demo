@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-// import { UserAuth } from "D:/divyang radadiya/desktop/reactcode/EasyLearn/src/Context/AuthContext.js";
 import { toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
-// import { child, set } from 'firebase/database';
-// import { fireDb, auth } from "../Firebase";
-// import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const initialState = {
   username: "",
@@ -25,7 +21,6 @@ function Register() {
   const [state, setState] = useState(initialState);
   const { username, email, contact, password } = state;
   const [data, setData] = useState({});
-  // const { user } = UserAuth();
 
   function handleChange(e) {
     const { name, value } = e.target;

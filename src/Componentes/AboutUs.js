@@ -14,16 +14,16 @@ function AboutUs() {
 
   return (
     <>
-      <section className="py-10 lg:py-20 bg-stone-100 font-poppins dark:bg-gray-800">
-        <div className="max-w-6xl py-4 mx-auto lg:py-6 md:px-6 sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl">
+      <section className="py-10 lg:py-5 bg-white font-poppins dark:bg-gray-800">
+        <div className="max-w-6xl mx-auto lg:py-6 md:px-6 sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl">
           <div className="flex flex-wrap">
             <div className="w-full px-4 mb-10 mx-auto lg:mb-0 ">
               <div className="px-4 pl-4 mb-6">
-                <p className="my-2 text-7xl font-normal text-lime-500 dark:text-teal-300">
+                {/* <p className="my-2 text-7xl font-normal text-lime-600 dark:text-teal-300">
                   About Us
-                </p>
+                </p> */}
                 <div className=" mt-20 inline-flex px-4 pl-4 mb-6">
-                  <span className="text-orange-300 dark:text-orange-300">
+                  <span className="text-orange-500 dark:text-orange-300">
                     <svg className="w-14 h-14" viewBox="0 0 16 16">
                       <PiHandsPrayingFill />
                     </svg>
@@ -31,13 +31,13 @@ function AboutUs() {
                   <p className="w-auto text-3xl font-normal px-5 md:text-5xl dark:text-white">
                     Welcome to our site
                   </p>
-                  <span className="text-orange-300 dark:text-orange-300">
+                  <span className="text-orange-500 dark:text-orange-300">
                     <svg className="w-14 h-14" viewBox="0 0 16 16">
                       <PiHandsPrayingFill />
                     </svg>
                   </span>
                 </div>
-                <p className="px-4 mb-8 text-3xl font-light text-center leading-10 text-gray-800 dark:text-slate-300">
+                <p className="px-4 mb-8 text-3xl font-light text-center leading-10 text-gray-900 dark:text-slate-300">
                   we strive to help our community with that same integrity and
                   passion. Our focus is to improve the way our content is
                   published and distributed. Our goal is to become even more
@@ -48,7 +48,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="mx-36 h-1 my-6 overflow-hidden bg-emerald-200 rounded-lg"></div>
+        <div className="mx-10 h-1 my-6 overflow-hidden bg-emerald-400 rounded-lg"></div>
         <div className="max-w-6xl py-10 mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl">
           <div className="px-4 pl-4 mb-6">
             <h2 className="pb-2 text-2xl font-normal uppercase text-slate-800 md:text-4xl dark:text-slate-300">
@@ -269,14 +269,14 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="mx-36 h-1 my-6 overflow-hidden bg-emerald-300 rounded-lg"></div>
+        <div className="mx-10 h-1 my-6 overflow-hidden bg-emerald-400 rounded-lg"></div>
         <div className="max-w-6xl py-6 my-20 mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl">
           <div className="px-4 mb-10 text-center">
             <h2 className="text-2xl font-normal uppercase text-gray-800 md:text-4xl dark:text-gray-300">
               Frequently Asked Questions
             </h2>
           </div>
-          <div className="flex flex-col mx-auto justify-between max-w-3xl px-6 py-4 mb-4 bg-white rounded-lg shadow dark:bg-gray-700">
+          <div className="flex flex-col mx-auto justify-between max-w-3xl px-6 py-4 mb-4 bg-white rounded-lg shadow-md dark:bg-gray-700">
             <div className="flex items-center justify-between ">
               <span className="font-normal text-2xl text-black dark:text-white">
                 What is Components ? How does it help us ?
@@ -308,7 +308,7 @@ function AboutUs() {
             </div>
           </div>
         </div>
-        <div className="mx-36 h-1 my-6 overflow-hidden bg-emerald-300 rounded-lg"></div>
+        <div className="mx-10 h-1 my-6 overflow-hidden bg-emerald-400 rounded-lg"></div>
         <div className="max-w-6xl py-6 my-20 mx-auto sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-6xl">
           <div className="px-4 mb-10 text-center">
             <h2 className="text-2xl font-normal uppercase text-gray-800 md:text-4xl dark:text-gray-300">
